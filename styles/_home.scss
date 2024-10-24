@@ -43,7 +43,7 @@
 
 .hero-box {
   clip-path: polygon(34% 100%, 61% 0, 100% 0%, 100% 100%);
-  background-image: url("../images/hero-img.jpg");
+  background-image: url("../images/home/hero_img.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 1000px;
@@ -77,6 +77,17 @@
     position: relative;
     bottom: -5px;
   }
+  .single-product-slide{
+    height: 400px;
+    @include responsive('medium'){
+      height: 350px;
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
   
 }
 
@@ -84,6 +95,20 @@
   // border: 2px solid red;
   width: 90%;
   margin: auto;
+  .single-chosen-slide{
+    height: 500px;
+    @include responsive('medium'){
+      height: 400px;
+    }
+    @include responsive('small'){
+      height: 300px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   .more-explore-btn{
     transition: 1s;
     &:hover{
@@ -274,79 +299,9 @@
   }
 }
 
-#count-section {
-  position: relative;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  margin-bottom: 20px;
-
-  .background-image {
-    background-image: url("/images/1.jpg");
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }
-
-  .content {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-
-    h2 {
-      font-size: 18px;
-      color: #fff;
-      text-align: center;
-      line-height: 22px;
-      font-family: Montserrat;
-      font-weight: 400;
-      width: 90%;
-
-      // &::before {
-      //   content: "qdqdq";
-      //   position: absolute;
-      //   top: -20%;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   height: 2px;
-      //   width: 90%;
-      //   background-color: #FFF212;
-      // }
-    }
-
-    .statistika {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 10px;
-
-      .stat-item {
-        text-align: center;
-
-        .count {
-          font-size: 32px;
-          font-weight: bold;
-          color: #e91e63;
-          font-family: "poppins";
-        }
-
-        p {
-          margin: 10px 0 0;
-          font-size: 16px;
-          font-family: poppins;
-          font-weight: 400;
-          line-height: 20px;
-        }
-      }
-    }
+#statistics{
+  .single-statistic-box{
+    height: 200px;
   }
 }
 

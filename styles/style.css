@@ -49,7 +49,7 @@ header select {
 .hero-box {
   -webkit-clip-path: polygon(34% 100%, 61% 0, 100% 0%, 100% 100%);
           clip-path: polygon(34% 100%, 61% 0, 100% 0%, 100% 100%);
-  background-image: url("../images/hero-img.jpg");
+  background-image: url("../images/home/hero_img.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 1000px;
@@ -91,10 +91,43 @@ header select {
   position: relative;
   bottom: -5px;
 }
+#product-slider .single-product-slide {
+  height: 400px;
+}
+@media (max-width: 768px) {
+  #product-slider .single-product-slide {
+    height: 350px;
+  }
+}
+#product-slider .single-product-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 #chosen-slider {
   width: 90%;
   margin: auto;
+}
+#chosen-slider .single-chosen-slide {
+  height: 500px;
+}
+@media (max-width: 768px) {
+  #chosen-slider .single-chosen-slide {
+    height: 400px;
+  }
+}
+@media (max-width: 425px) {
+  #chosen-slider .single-chosen-slide {
+    height: 300px;
+  }
+}
+#chosen-slider .single-chosen-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #chosen-slider .more-explore-btn {
   transition: 1s;
@@ -163,62 +196,8 @@ header select {
   filter: grayscale(0);
 }
 
-#count-section {
-  position: relative;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-#count-section .background-image {
-  background-image: url("/images/1.jpg");
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-}
-#count-section .content {
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-}
-#count-section .content h2 {
-  font-size: 18px;
-  color: #fff;
-  text-align: center;
-  line-height: 22px;
-  font-family: Montserrat;
-  font-weight: 400;
-  width: 90%;
-}
-#count-section .content .statistika {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 10px;
-}
-#count-section .content .statistika .stat-item {
-  text-align: center;
-}
-#count-section .content .statistika .stat-item .count {
-  font-size: 32px;
-  font-weight: bold;
-  color: #e91e63;
-  font-family: "poppins";
-}
-#count-section .content .statistika .stat-item p {
-  margin: 10px 0 0;
-  font-size: 16px;
-  font-family: poppins;
-  font-weight: 400;
-  line-height: 20px;
+#statistics .single-statistic-box {
+  height: 200px;
 }
 
 @media (min-width: 578px) {
@@ -489,7 +468,7 @@ header select {
 }
 @media (max-width: 992px) {
   #about-slider .swiper {
-    width: 360px;
+    width: 300px;
   }
 }
 #about-slider .swiper-slide {
@@ -625,6 +604,7 @@ header select {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
 }
 #deteil-slider-section .swiper-slide img {
   display: block;
@@ -661,5 +641,5 @@ a {
 }
 
 .main-bg {
-  background-color: rgb(31, 38, 49);
+  background-color: rgb(31, 38, 49) !important;
 }/*# sourceMappingURL=style.css.map */
